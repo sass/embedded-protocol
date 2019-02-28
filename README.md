@@ -40,7 +40,7 @@ This protocol defines three types of messages between endpoints:
   All response message types begin with the corresponding request name and end
   with `Response`.
 * *Events* may not be responded to and include no `id` field. All event message
-  types end with `Message`.
+  types end with `Event`.
 
 A message from the host to the compiler is called *inbound*. A message from the
 compiler to the host is called *outbound*. Implementations must guarantee that
