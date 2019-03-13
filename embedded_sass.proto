@@ -99,23 +99,23 @@ message CompileResponse {
     string message = 1;
 
     // The span associated with the failure. Optional.
-    SourceSpan span;
+    SourceSpan span = 2;
 
     // The stack trace associated with the failure.
     //
     // The empty string indicates that no stack trace is available. Otherwise,
     // the format of this stack trace is not specified and is likely to be
     // inconsistent between implementations.
-    string stack_trace = 5;
+    string stack_trace = 3;
   }
 
   // The success or failure result of the compilation. Mandatory.
   oneof result {
     // The result of a successful compilation.
-    CompileSuccess success;
+    CompileSuccess success = 2;
 
     // The result of a failed compilation.
-    CompileFailure failure;
+    CompileFailure failure = 3;
   }
 }
 
