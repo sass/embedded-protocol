@@ -197,7 +197,7 @@ message InboundMessage {
     CompileRequest compileRequest = 2;
     CanonicalizeResponse canonicalizeResponse = 3;
     ImportResponse importResponse = 4;
-    FunctionCallResponse = 5;
+    FunctionCallResponse functionCallResponse = 5;
   }
 }
 
@@ -399,7 +399,7 @@ message OutboundMessage {
     // the given signature, that default argument values are instantiated
     // appropriately, and that variable argument lists (`$args...`) are passed
     // as `Value.ArgumentList`s.
-    repeated Value value;
+    repeated Value value = 4;
   }
 
   // The wrapped message. Mandatory.
@@ -409,7 +409,7 @@ message OutboundMessage {
     LogEvent logEvent = 3;
     CanonicalizeRequest canonicalizeRequest = 4;
     ImportRequest importRequest = 5;
-    FunctionCallRequest = 6;
+    FunctionCallRequest functionCallRequest = 6;
   }
 }
 
