@@ -543,7 +543,7 @@ message Value {
 
     /// The color's percent lightness. Mandatory. Must be between 0 and 100,
     /// inclusive.
-    double lightness = 2;
+    double lightness = 3;
 
     /// The color's alpha channel. Manddatory. Must be between 0 and 1,
     /// inclusive.
