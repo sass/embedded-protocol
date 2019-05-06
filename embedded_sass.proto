@@ -550,6 +550,37 @@ message Value {
     double alpha = 4;
   }
 
+  // A SassScript list value.
+  message List {
+    // Different types of separators a list can have.
+    enum Separator {
+      // List elements are separated by a comma.
+      COMMA = 1;
+
+      // List elements are separated by whitespace.
+      SPACE = 2;
+
+      // List elements are separated by a forward slash.
+      SLASH = 3;
+
+      // The list's separator hasn't yet been determined.
+      //
+      // Singleton lists and empty lists don't have separators defiend. This
+      // means that list functions will prefer other lists' separators if
+      // possible.
+      UNDECIDED = 4;
+    }
+
+    // The type of separator for this list. Mandatory.
+    Separator separator = 1;
+
+    // Whether this list has square brackets. Mandatory.
+    bool has_brackets = 2;
+
+    // The elements of this list.
+    repeated Value contents = 3;
+  }
+
   // The value itself. Mandatory.
   //
   // This is wrapped in a message type rather than used directly to reduce
@@ -559,5 +590,6 @@ message Value {
     Number number = 2;
     RgbColor rgb_color = 3;
     HslColor hsl_color = 4;
+    List list = 5;
   }
 }
