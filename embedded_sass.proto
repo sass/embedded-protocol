@@ -555,20 +555,20 @@ message Value {
     // Different types of separators a list can have.
     enum Separator {
       // List elements are separated by a comma.
-      COMMA = 1;
+      COMMA = 0;
 
       // List elements are separated by whitespace.
-      SPACE = 2;
+      SPACE = 1;
 
       // List elements are separated by a forward slash.
-      SLASH = 3;
+      SLASH = 2;
 
       // The list's separator hasn't yet been determined.
       //
       // Singleton lists and empty lists don't have separators defiend. This
       // means that list functions will prefer other lists' separators if
       // possible.
-      UNDECIDED = 4;
+      UNDECIDED = 3;
     }
 
     // The type of separator for this list. Mandatory.
