@@ -107,8 +107,9 @@ request's id. Otherwise, even if the error was detected while processing a
 response with an id, the `id` field must be set to `-1`.
 
 When the host detects that the compiler is violating this protocol, it does not
-need to send a `ProtocolError` message to the compiler, but it should expose an
-error to the host's consumers.
+need to send a `ProtocolError` message to the compiler. Instead, it should
+expose an error to the host's consumers and close the connection with the
+compiler.
 
 An error occurs whenever any requirements set out by this protocol (including
 the documentation in `embedded_sass.proto`) are violated. This includes, but is
