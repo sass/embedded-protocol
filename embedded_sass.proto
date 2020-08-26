@@ -224,11 +224,11 @@ message InboundMessage {
 
   // The wrapped message. Mandatory.
   oneof message {
-    CompileRequest compileRequest = 1;
-    CanonicalizeResponse canonicalizeResponse = 2;
-    ImportResponse importResponse = 3;
-    FileImportResponse fileImportResponse = 4;
-    FunctionCallResponse functionCallResponse = 5;
+    CompileRequest compileRequest = 2;
+    CanonicalizeResponse canonicalizeResponse = 3;
+    ImportResponse importResponse = 4;
+    FileImportResponse fileImportResponse = 5;
+    FunctionCallResponse functionCallResponse = 6;
   }
 }
 
