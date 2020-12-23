@@ -8,7 +8,7 @@ package sass.embedded_protocol;
 
 // The wrapper type for all messages sent from the host to the compiler. This
 // provides a `oneof` that makes it possible to determine the type of each
-// inbound message.currently
+// inbound message.
 message InboundMessage {
   // A request for information about the version of the embedded compiler. The
   // host can use this to provide diagnostic information to the user, to check
@@ -249,19 +249,19 @@ message InboundMessage {
 // provides a `oneof` that makes it possible to determine the type of each
 // outbound message.
 message OutboundMessage {
-  // A response that contains the version of the embedded host.
+  // A response that contains the version of the embedded compiler.
   message VersionResponse {
     // The version of the embedded protocol, in semver format.
     string protocol_version = 1;
 
     // The version of the embedded compiler package. This has no guaranteed
     // format, although compilers are encouraged to use semver.
-    string compiler_version = 3;
+    string compiler_version = 2;
 
     // The version of the Sass implementation that the embedded compiler wraps.
     // This has no guaranteed format, although Sass implementations are
     // encouraged to use semver.
-    string implementation_version = 4;
+    string implementation_version = 3;
 
     // The name of the Sass implementation that the embedded compiler wraps.
     string implementation_name = 4;
