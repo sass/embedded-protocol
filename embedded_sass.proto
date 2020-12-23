@@ -504,7 +504,7 @@ message OutboundMessage {
     ImportRequest importRequest = 5;
     FileImportRequest fileImportRequest = 6;
     FunctionCallRequest functionCallRequest = 7;
-    VersionResponse VersionResponse = 8;
+    VersionResponse versionResponse = 8;
   }
 }
 
