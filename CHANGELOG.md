@@ -3,3 +3,5 @@
 * Added protocol versions and created this changelog.
 
 * Added the `VersionRequest` and `VersionResponse` messages.
+
+* Delimit messages with varints rather than fixed-size integers.
