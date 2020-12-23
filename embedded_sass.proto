@@ -419,7 +419,7 @@ message OutboundMessage {
     // When loading a URL, the compiler must first try resolving that URL
     // relative to the canonical URL of the current file, and canonicalizing the
     // result using the importer that loaded the current file. If this returns
-    // `null`, the compiler must then try canonicalizing the original URL with
+c    // `null`, the compiler must then try canonicalizing the original URL with
     // each importer in order until one returns something other than `null`.
     // That is the result of the import.
     string url = 4;
@@ -457,8 +457,7 @@ message OutboundMessage {
     // Mandatory.
     uint32 importer_id = 3;
 
-    // The canonical URL of the import. This is guaranteed to be a URL returned
-    // by a `CanonicalizeRequest` to this importer.
+    // The (non-canonicalized) URL of the import.
     string url = 4;
   }
 
