@@ -1,3 +1,7 @@
+## 1.0.0-beta.8
+
+* Added `CompileFailure.formatted` and `LogEvent.formatted` messages.
+
 ## 1.0.0-beta.7
 
 * Use `4294967295` as the special ID for error messages that aren't caused by a

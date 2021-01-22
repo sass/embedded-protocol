@@ -301,6 +301,11 @@ message OutboundMessage {
       // the format of this stack trace is not specified and is likely to be
       // inconsistent between implementations.
       string stack_trace = 3;
+
+      // A formatted string that contains the message, span (if available), and
+      // trace (if available). The format of this string is not specified and is
+      // likely to be inconsistent between implementations.
+      string formatted = 4;
     }
 
     // The success or failure result of the compilation. Mandatory.
@@ -347,6 +352,11 @@ message OutboundMessage {
     // the format of this stack trace is not specified and is likely to be
     // inconsistent between implementations.
     string stack_trace = 5;
+
+    // A formatted string that contains the message, span (if available), and
+    // trace (if available). The format of this string is not specified and is
+    // likely to be inconsistent between implementations.
+    string formatted = 6;
   }
 
   // A request for a custom importer to convert an imported URL to its canonical
