@@ -1,6 +1,9 @@
 ## 1.0.0-beta.8
 
-* Added `CompileFailure.formatted` and `LogEvent.formatted` messages.
+* Added fields to support formatted errors and logs.
+  * `CompileFailure.formatted`
+  * `LogEvent.formatted`
+  * `CompileRequest.color`
 
 ## 1.0.0-beta.7
 

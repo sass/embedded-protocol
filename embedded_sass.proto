@@ -125,6 +125,9 @@ message InboundMessage {
     // custom global functions. They must also reject any custom function names
     // that conflict with function names built into the Sass language.
     repeated string global_functions = 7;
+
+    // Whether to use terminal colors in formatted errors and logs.
+    bool color = 8;
   }
 
   // A response indicating the result of canonicalizing an imported URL.
@@ -302,9 +305,9 @@ message OutboundMessage {
       // inconsistent between implementations.
       string stack_trace = 3;
 
-      // A formatted string that contains the message, span (if available), and
-      // trace (if available). The format of this string is not specified and is
-      // likely to be inconsistent between implementations.
+      // A formatted, human-readable string that contains the message, span
+      // (if available), and trace (if available). The format of this string is
+      // not specified and is likely to be inconsistent between implementations.
       string formatted = 4;
     }
 
@@ -353,9 +356,9 @@ message OutboundMessage {
     // inconsistent between implementations.
     string stack_trace = 5;
 
-    // A formatted string that contains the message, span (if available), and
-    // trace (if available). The format of this string is not specified and is
-    // likely to be inconsistent between implementations.
+    // A formatted, human-readable string that contains the message, span (if
+    // available), and trace (if available). The format of this string is not
+    // specified and is likely to be inconsistent between implementations.
     string formatted = 6;
   }
 
