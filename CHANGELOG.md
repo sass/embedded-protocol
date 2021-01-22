@@ -5,6 +5,9 @@
   * `LogEvent.formatted`
   * `CompileRequest.color`
 
+* Remove `OutputStyle.NESTED` and `OutputStyle.COMPACT`. It's unlikely that any
+  host would support those any time soon.
+
 ## 1.0.0-beta.7
 
 * Use `4294967295` as the special ID for error messages that aren't caused by a
