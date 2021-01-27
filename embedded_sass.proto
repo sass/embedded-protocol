@@ -127,10 +127,10 @@ message InboundMessage {
     // Possible ways to to format errors and logs.
     message AlertStyle {
       // Whether to use terminal colors.
-      bool color = 0;
+      bool color = 1;
 
       // Which encoding to use.
-      Charset encoding = 1;
+      Charset encoding = 2;
     }
 
     // How to format errors and logs.
