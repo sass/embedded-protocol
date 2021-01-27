@@ -1,9 +1,10 @@
 ## 1.0.0-beta.8
 
-* Added fields to support formatted errors and logs.
+* Added fields to support requesting and sending formatted errors and logs.
+  * `CompileRequest.alert_style.color`
+  * `CompileRequest.alert_style.ascii`
   * `CompileFailure.formatted`
   * `LogEvent.formatted`
-  * `CompileRequest.color`
 
 * Remove `OutputStyle.NESTED` and `OutputStyle.COMPACT`. It's unlikely that any
   host would support those any time soon.
