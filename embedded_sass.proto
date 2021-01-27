@@ -118,19 +118,13 @@ message InboundMessage {
     // that conflict with function names built into the Sass language.
     repeated string global_functions = 7;
 
-    // Possible ways to encode output.
-    enum Charset {
-      UTF_8 = 0;
-      ASCII = 1;
-    }
-
     // Possible ways to to format errors and logs.
     message AlertStyle {
-      // Whether to use terminal colors.
+      // Whether to use terminal colors in the alert's formatted message.
       bool color = 1;
 
-      // Which encoding to use.
-      Charset encoding = 2;
+      // Whether to encode the alert's formatted message in ASCII.
+      bool ascii = 2;
     }
 
     // How to format errors and logs.
