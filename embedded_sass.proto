@@ -118,8 +118,23 @@ message InboundMessage {
     // that conflict with function names built into the Sass language.
     repeated string global_functions = 7;
 
-    // Whether to use terminal colors in formatted errors and logs.
-    bool color = 8;
+    // Possible ways to encode output.
+    enum Charset {
+      UTF_8 = 0;
+      ASCII = 1;
+    }
+
+    // Possible ways to to format errors and logs.
+    message AlertStyle {
+      // Whether to use terminal colors.
+      bool color = 0;
+
+      // Which encoding to use.
+      Charset encoding = 1;
+    }
+
+    // How to format errors and logs.
+    AlertStyle alert_style = 8;
   }
 
   // A response indicating the result of canonicalizing an imported URL.
