@@ -1,8 +1,8 @@
 ## 1.0.0-beta.8
 
 * Added fields to support requesting and sending formatted errors and logs.
-  * `CompileRequest.alert_style.color`
-  * `CompileRequest.alert_style.ascii`
+  * `CompileRequest.alert_color`
+  * `CompileRequest.alert_ascii`
   * `CompileFailure.formatted`
   * `LogEvent.formatted`
 
