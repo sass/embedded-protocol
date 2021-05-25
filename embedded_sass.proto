@@ -115,6 +115,12 @@ message InboundMessage {
 
     // Whether to encode the formatted message of errors and logs in ASCII.
     bool alert_ascii = 9;
+    
+    // Whether to report all deprecation warnings or only the first few ones.
+    bool verbose = 10;
+    
+    // Whether to silence deprecation warnings coming from dependencies
+    bool quiet_deps = 11;
   }
 
   // A response indicating the result of canonicalizing an imported URL.
