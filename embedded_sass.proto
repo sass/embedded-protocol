@@ -117,9 +117,13 @@ message InboundMessage {
     bool alert_ascii = 9;
     
     // Whether to report all deprecation warnings or only the first few ones.
+    // If this is `false`, the compiler may choose not to send events for
+    // repeated deprecation warnings. If this is `true`, the compiler must emit
+    // an event for every deprecation warning it encounters.
     bool verbose = 10;
     
-    // Whether to silence deprecation warnings coming from dependencies
+    // Whether to omit events for deprecation warnings coming from dependencies
+    // (files loaded from a different importer than the input).
     bool quiet_deps = 11;
   }
 
