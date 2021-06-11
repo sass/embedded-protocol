@@ -282,7 +282,7 @@ message OutboundMessage {
       // this list. This must include the entrypoint file's URL if either
       // `CompileRequest.input.path` or `CompileRequest.StringInput.url` was
       // passed.
-      repeated string included_urls = 3;
+      repeated string loaded_urls = 3;
     }
 
     // A message indicating that the Sass file could not be successfully

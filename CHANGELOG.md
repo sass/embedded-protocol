@@ -8,7 +8,7 @@
 * Add `CompileRequest.quiet_deps` and `CompileRequest.verbose` flags to control
   how the compiler emits compilation warnings.
 
-* Add a `CompileSuccess.included_urls` field that indicates the URLs that were
+* Add a `CompileSuccess.loaded_urls` field that indicates the URLs that were
   loaded by a compilation.
 
 * Clarify that `CompileRequest.StringInput.url` must be a canonical URL.
