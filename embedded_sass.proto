@@ -223,7 +223,8 @@ message InboundMessage {
 
     // The IDs of all `Value.ArgumentList`s in `FunctionCallRequest.arguments`
     // whose keywords were accessed. See `Value.ArgumentList` for details.
-    // Mandatory if `result.success` is set.
+    // Mandatory if `result.success` is set. This may not include the special
+    // value `0` and it may not include multiple instances of the same ID.
     repeated uint32 accessed_argument_lists = 4;
   }
 
