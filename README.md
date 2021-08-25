@@ -220,7 +220,7 @@ whichever form is currently in use to be sent between endpoints without having
 to eagerly normalize it.
 
 However, users of the host language API should be able to transparently treat
-any color object as though it were either RGB or HSL form. The API should
+any color object as though it were either RGB, HSL, or HWB form. The API should
 provide access to the red, green, and blue, hue, saturation, and lightness
 channels of *every* color object. It should use [this RGB-to-HSL algorithm],
 [this HSL-to-RGB algorithm], [this RGB-to-HWB algorithm], and [this HWB-to-RGB
