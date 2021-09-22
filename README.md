@@ -289,7 +289,7 @@ expose Sass-specific APIs like the [assertions](#assertions) described above.
 #### Calculations
 
 Calculations are represented similarly to their representation in the Sass
-specification, as a tree of binary operations and other calculatiosn that
+specification, as a tree of binary operations and other calculations that
 terminates in numbers or strings. This tree structure may be exposed to the host
 language, or the host may choose to keep the structure of calculations opaque.
 
