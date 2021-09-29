@@ -21,7 +21,10 @@ jobs:
   tag:
     name: "Tag release"
     runs-on: "ubuntu-latest"
-    if: "github.event_name == 'push' && github.repository == 'sass/embedded-protocol'"
+    if: |
+      github.event_name == 'push' &&
+          github.repository == 'sass/embedded-protocol' &&
+          github.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v2
@@ -40,4 +43,4 @@ jobs:
           git config --global user.name 'SassBot'
           git config --global user.email 'sass.bot.beep.boop@gmail.com'
           git tag "${{ steps.version-info.VERSION }}"
-          git push --tag
+          git push --tags
