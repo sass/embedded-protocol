@@ -247,8 +247,7 @@ easy to treat every value as a list, and should discourage treating values
 passed as `Value.List`s specially.
 
 API users should be encouraged to return unbracketed comma-separated lists
-unless there's a particular reason not to. Only empty and single-element lists
-can have an undecided separator.
+unless there's a particular reason not to.
 
 Two lists are equal if they have the same elements, separator, and if they're
 both bracketed or both unbracketed. An empty list is equal to an empty map.
