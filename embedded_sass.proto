@@ -826,7 +826,7 @@ message Value {
 
     // The signature for this function. Mandatory.
     //
-    // If this isn't a valid Sass function signature that could appear in after
+    // If this isn't a valid Sass function signature that could appear after
     // `@function` in a Sass stylesheet (such as `mix($color1, $color2, $weight:
     // 50%)`), the compiler must treat the function's return value as invalid.
     //
