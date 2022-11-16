@@ -140,6 +140,11 @@ not limited to:
 The `ProtocolError` message must *not* be used to report Sass errors or errors
 running custom functions or importers.
 
+The `ProtocolError` message with `ProtocolErrorType.PARAMS` should only be used
+to report errors for violating any requirements set out by this protocol. Errors
+occured during compliations for violating additional requirements set out by the
+compiler should return `CompileResponse` message with `CompileFailure` instead.
+
 ### Host Language API
 
 Although not strictly part of the protocol, the host language will presumably
