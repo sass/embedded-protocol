@@ -154,13 +154,13 @@ This includes, but is not limited to:
 
 * The compiler must send a `CompileFailure` for:
 
-  * Sass errors
+  * Errors in responses received from the host
 
   * Errors parsing custom function signatures in `CompileRequest`
 
   * Errors parsing URL in `ImporterResponse` or `FileImporterReponse`
 
-  * Errors in responses received from the host
+  * Sass errors
 
 ### Host Language API
 
