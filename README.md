@@ -137,13 +137,30 @@ not limited to:
 
 * Sending a message with a `null` value for a mandatory field.
 
-The `ProtocolError` message must *not* be used to report Sass errors or errors
-running custom functions or importers.
+The `ProtocolError` message may be used to report errors for violating any
+additional requirements related to this protocol set out by the Sass language.
+This includes, but is not limited to:
 
-The `ProtocolError` message with `ProtocolErrorType.PARAMS` should only be used
-to report errors for violating any requirements set out by this protocol. Errors
-occured during compliations for violating additional requirements set out by the
-compiler should return `CompileResponse` message with `CompileFailure` instead.
+* Sending an invalid `Value` that violates requirements of a SassScript value.
+
+The `ProtocolError` message must *not* be used to report any recoverable errors.
+This includes, but is not limited to: 
+
+* The host must send a response with a result of `error` for:
+
+  * Errors running custom functions
+
+  * Errors running importers
+
+* The compiler must send a `CompileFailure` for:
+
+  * Sass errors
+
+  * Errors parsing custom function signatures in `CompileRequest`
+
+  * Errors parsing URL in `ImporterResponse` or `FileImporterReponse`
+
+  * Errors in responses received from the host
 
 ### Host Language API
 
