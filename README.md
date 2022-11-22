@@ -146,9 +146,8 @@ This includes, but is not limited to:
 The `ProtocolError` message must *not* be used to report any recoverable errors.
 The host must send a response with a result of `error` for errors running custom
 functions or importers. The compiler must send a `CompileFailure` for Sass
-errors, errors of results received from the host, or errors parsing custom
-function signatures in `CompileRequest` or URL in `ImporterResponse` or
-`FileImporterReponse`.
+errors, errors of results from the host, or errors parsing custom function
+signatures or URL from the host.
 
 ### Host Language API
 
