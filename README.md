@@ -144,23 +144,11 @@ This includes, but is not limited to:
 * Sending an invalid `Value` that violates requirements of a SassScript value.
 
 The `ProtocolError` message must *not* be used to report any recoverable errors.
-This includes, but is not limited to: 
-
-* The host must send a response with a result of `error` for:
-
-  * Errors running custom functions
-
-  * Errors running importers
-
-* The compiler must send a `CompileFailure` for:
-
-  * Errors in responses received from the host
-
-  * Errors parsing custom function signatures in `CompileRequest`
-
-  * Errors parsing URL in `ImporterResponse` or `FileImporterReponse`
-
-  * Sass errors
+The host must send a response with a result of `error` for errors running custom
+functions or importers. The compiler must send a `CompileFailure` for Sass
+errors, errors of results received from the host, or errors parsing custom
+function signatures in `CompileRequest` or URL in `ImporterResponse` or
+`FileImporterReponse`.
 
 ### Host Language API
 
