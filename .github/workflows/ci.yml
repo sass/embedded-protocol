@@ -49,14 +49,14 @@ jobs:
         run: |
           echo "::set-output name=VERSION::$(cat VERSION)"
           echo "::set-output name=VERSION_MODIFIED::$(
-            git diff --quiet HEAD^ VERSION && echo true || echo false
+            git diff --quiet HEAD^ VERSION && echo false || echo true
           )"
       - name: Create release
         if: |
-          steps.version-info.VERSION_MODIFIED == 'true' &&
-            !endsWith(steps.version-info.VERSION, '-dev')
+          steps.version-info.outputs.VERSION_MODIFIED == 'true' &&
+            !endsWith(steps.version-info.outputs.VERSION, '-dev')
         run: |
           git config --global user.name 'SassBot'
           git config --global user.email 'sass.bot.beep.boop@gmail.com'
-          git tag "${{ steps.version-info.VERSION }}"
+          git tag "${{ steps.version-info.outputs.VERSION }}"
           git push --tags

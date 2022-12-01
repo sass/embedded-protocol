@@ -1,4 +1,4 @@
-## 1.0.0
+## 1.2.0
 
 * Have the compiler treat several user-generated invalid responses as
   compilation errors rather than `ProtocolError`s:
@@ -11,14 +11,14 @@
 * Clarify that an invalid signature in a `HostFunction` should treat the current
   function as failing, rather than the `HostFunction`.
 
-## 1.0.0-beta.18
+## 1.1.0
 
-* Add `CompileRequest.source_map_include_sources`.
+* Add a `charset` option that controls whether or not Sass emits a
+  `@charset`/BOM for non-ASCII stylesheets.
 
-## 1.0.0-beta.17
+## 1.0.0
 
-* Mark `ImportResponse.result` as optional. Importers should be able to return
-  `null` to indicate that a file wasn't found.
+* First stable release.
 
 ## 1.0.0-beta.16
 
