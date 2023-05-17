@@ -1,3 +1,8 @@
+**This is no longer the repository for the Embedded Sass protocol.** The
+protocol definition is now maintained in [the Sass language specification repo].
+
+[the Sass language specification repo]: https://github.com/sass/sass/blob/main/spec/embedded-protocol.md
+
 ## The Embedded Sass Protocol
 
 * [Overview](#overview)
